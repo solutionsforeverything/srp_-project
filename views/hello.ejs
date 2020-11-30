@@ -1,0 +1,83 @@
+<!DOCTYPE htmls>
+<html>
+    
+        <head>
+        <title>voting</title>
+        <style>
+
+            input[type=text] {
+              width: 100%;
+              padding: 12px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+              margin-top: 6px;
+              margin-bottom: 16px;
+              resize: vertical;
+            }
+            input[type=number] {
+              width: 100%;
+              padding: 12px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+              margin-top: 6px;
+              margin-bottom: 16px;
+              resize: vertical;
+            }
+            
+            input[type=submit] {
+              background-color: #4CAF50;
+              color: white;
+              padding: 12px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+            
+            input[type=submit]:hover {
+              background-color: #45a049;
+            }
+            
+            .container {
+              border-radius: 5px;
+              background-color: #f2f2f2;
+              padding: 20px;
+            }
+                       
+                        body{
+                            border: 2px solid black;
+                            margin :auto;
+                            padding :50px;
+                        font-family: Arial, Helvetica, sans-serif;
+                       box-sizing: border-box;
+                        }
+                        h1{color : red;
+                        font-family: ALGERIAN;}
+                      </style>
+   </head>
+   <body>
+    
+    <h1> you can vote here</h1>
+    <div class="container">
+    <form id="login-form" method="POST" action="/voted">
+       click this button to vote:
+       <input type="text"  name="vno1" value=<%=id1%> readonly >
+      
+        <H1>PARTY</H1>
+        <br>
+        <input type="radio" id="kgp" name="party" value="kgp" required>KGP   <img src="s1.png" height="50" width="50" border="2px solid black">
+
+        <br>
+        <input type="radio" id="bdmk" name="party" value="bdmk" required>BDMK <img src="s2.jpg" height="50" width="50" border="2px solid black">
+        <br>
+        <br>
+        <input type="radio" id="bongress" name="party" value="bongress" required>BONGRESS <img src="s3.jpg " height="50" width="50" border="2px solid black">
+        <br>
+        <br>
+        <input type="submit" value="submit" id="signup-submit">
+    
+    </form>
+    </div>
+    </body>
+    </html>

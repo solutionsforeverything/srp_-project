@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <title>Signup</title>
+        <link rel="stylesheet" href="signup.css">
+    <script>
+      function validation()
+      { 
+      var pass= document.forms["sform"]["password"].value;
+      var cpass= document.forms["sform"]["cpass"].value;
+    
+     
+    if(pass!=cpass)
+      {
+        alert("password and confirm password must be equal");
+       
+        return false;
+      }
+      return true;}
+    </script></head><body>
+      <main id="smain-id">
+    <h1 id="sign">SIGNUP</h1>
+    <form id="signup-form" name="sform" method="POST" onsubmit="return(validation());" action="/signup">
+      USERNAME(voterid (10 digit)):<br><input type="text" name="username" id="suser" size=10 pattern="\d{10}$" title="voter id  contains 10 digits"  required><br>
+      NAME<br><input type="text" name="name" id="name" required></br>
+     
+      MOBILE NUMBER:<br>  <input type="tel" name="mnumber" id="mob-num" pattern="\d{12}$" title="phone no conatins 12 digits with country code 91" required></br>
+      E-MAIL ID:<br>  <input type="email" name="mail"id="email" required><br>
+      
+     
+      PASSWORD:<br><input type="password" name="password" id="spass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
+      CONFIRM PASSWORD:<br>  <input type="password" name="cpass" id="s1pass"  required><br>
+      DECLARATION:<br> <input type="checkbox" name="decalration" id="decalare" required>I hereby declare that,all the details provided above are true to my knowledge.
+        <br><br>
+        <input type="submit" value="signup" id="signup-submit">
+    </main>
+    </form>
+    </body>
+    </html>
